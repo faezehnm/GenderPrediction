@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+        <title>Gender prediction</title>
+    </head>
+    <body>
+        
+        <div id='content'>
+            <label id='title' >Mr. or Ms. ?</label>
+            <form action="javascript:void(0);">
+                <div id="input-wrapper">
+                    <input type="text" id='input-name' maxlength="255" pattern="^[a-zA-Z\s]*$">
+                    <label for='input-name' id="input-name-label"> Name </label>
+                </div>
+                <div id="gender">
+                    <div id="input-wrapper">
+                        <label for="gender-man"> Male </label>
+                        <input type='radio' id="gender-man" name='gender'>
+                    </div>
+                    <div id="input-wrapper">
+                        <label for='gender-woman'> Female</label>
+                        <input type='radio' id="gender-woman" name="gender">
+                    </div>
+                </div>
+
+                <button id="form-small-btn" onclick="getName()">Predict</button>
+                <button id="form-small-btn" onclick="saveNew()">Save your Answer</button>
+            </form>
+            
+            <div id='result'>
+                <div id='prediction'>
+                    <label for='prediction' id='predict-title'>Prediction</label>
+                    <div id='prediction-wrapper'>
+                        <label id='prediction-result'></label>
+                        <button id='prediction-save' onclick="saveResult();">Save result</button>
+                    </div>
+                </div>
+
+                <div id='saved-answer'>
+
+                    <label id='saved-before'>*saved before</label>
+                    <div id="result-label">
+                        <label id='saved-answer-label'>Saved Answer</label>
+                     
+                        <label id='saved-answer-gender'></label>
+                       
+                    </div>
+                    
+                    <button id="cancle-btn" onclick="clearResult();">clear</button>
+                </div>
+            </div>
+            
+            <div id='snackbar'></div>
+        </div>
+    </body>
+</html>
