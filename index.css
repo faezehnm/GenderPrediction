@@ -1,6 +1,4 @@
-/**
-baseic style for html file
-*/
+/*basic style for html file */
 html {
   height: 100%;
   -webkit-text-size-adjust: 100%;
@@ -8,19 +6,18 @@ html {
   padding: 0;
   border: 0;
 }
+/*body refer to body tag in html file and apply style to that tag*/
 body {
   background-image: url('images/background.jpg');
   background-position: center;
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+/* title is an id referd to an alement in html file which its id set to title */
 #title {
   font-size: 20px;
   color: black;
@@ -33,6 +30,7 @@ body {
   position: absolute;
   transform: translate(0%, -313%);
 }
+/*referd to element in html file which id is centents(main element of website that is in center of page)*/
 #content {
   border: 1px solid #30e4ab;
   background-color: rgba(245, 245, 245, 0.8);
@@ -44,17 +42,20 @@ body {
   align-items: center;
   position: relative;
 }
+/* refered to form tag (a from in left of 'context' element that contain an input type text and radio button)*/
 form {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
 }
+/*referd to that div which wrap input*/
 form #input-wrapper {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
 }
+/* referd to that input which is in top of 'form' for name*/
 form #input-name {
   width: 16em;
   height: 2em;
@@ -64,12 +65,15 @@ form #input-name {
   color: blue;
   margin-left: 12px;
 }
+/*applyed to label of input-name which is left of the input for name*/
 form #input-name-label {
   font-weight: bold;
 }
+/*applyed to input of name when the pattern won't be match*/
 form input:invalid {
   border: red solid 3px !important;
 }
+/*applyed to that div which wrapp radio buttons (gender radio button)*/
 form #gender {
   margin-top: 14px;
   display: flex;
@@ -78,6 +82,7 @@ form #gender {
   margin-bottom: 14px;
   justify-content: cente;
 }
+/*applyed to 'predict' and 'save your answer' button in form tag*/
 form #form-small-btn {
   background: #30e4ab;
   color: white;
@@ -87,12 +92,14 @@ form #form-small-btn {
   border: transparent;
   margin-bottom: 6px;
 }
+/*applyed to a div which wrap all elements in right of 'context' element*/
 #result {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-top: 3em;
 }
+/*applyed to 'prediction' and 'result' div*/
 #result #prediction {
   display: none;
   flex-direction: column;
@@ -100,6 +107,7 @@ form #form-small-btn {
   align-items: center;
   justify-content: center;
 }
+/*applyed to 'resut' and 'predic-title' which is title of predict-result div*/
 #result #predict-title {
   font-weight: bold;
   color: blue;
@@ -107,17 +115,20 @@ form #form-small-btn {
   top: 59px;
   position: absolute;
 }
+/*applyed to 'result' and 'prediction-wrapper' which wrap result of prediction(label) nad 'save result' button*/
 #result #prediction-wrapper {
   display: flex;
   align-items: center;
   margin-top: -2em;
 }
+/*it is clear that applyed to which elements. prediction result is a lebel in prediction div which shoe gender of name*/
 #result #prediction-wrapper #prediction-result {
   color: blue;
   font-size: 16px;
   font-weight: bold;
   margin-right: 7px;
 }
+/*prediction-save applyed to a button in predction div*/
 #result #prediction-wrapper #prediction-save {
   border: transparent;
   background-color: blue;
@@ -125,6 +136,7 @@ form #form-small-btn {
   border-radius: 9px;
   padding: 9px;
 }
+/*saved-answer applyed to a label which will be visible if the name exisst in localStorage*/
 #result #saved-answer {
   margin-top: 2em;
   display: none;
@@ -132,6 +144,7 @@ form #form-small-btn {
   justify-content: center;
   align-items: center;
 }
+/*saved-answer-label applyed to a label which will be visible if the name's gender stored in localStorage*/
 #result #saved-answer #saved-answer-label {
   background: pink;
   color: white;
@@ -139,16 +152,19 @@ form #form-small-btn {
   width: 6em;
   border-radius: 3px;
 }
+/*saved-answer-gender applyed to a lebel which show gender of an sotored name*/
 #result #saved-answer #saved-answer-gender {
   color: PINK;
   FONT-WEIGHT: BOLD;
 }
+/*saved-before applyed to a label which Emphasis if the name was already in localStorage*/
 #result #saved-answer #saved-before {
   display: none;
   color: #30ad30;
   font-weight: bold;
   margin-bottom: 15px;
 }
+/*cancle-btn applyed to that button which will clear localStorafe from  specified name*/
 #result #saved-answer #cancle-btn {
   color: red;
   BORDER: 1px solid red;
@@ -156,10 +172,12 @@ form #form-small-btn {
   width: 11em;
   margin-top: 12px;
 }
+/*applyed to radio button wrppaer*/
 #gender {
   display: flex;
   flex-direction: column;
 }
+/*applyed to a div wich will be visible when a message is arrived*/
 #snackbar {
   visibility: hidden;
   min-width: 250px;
@@ -181,6 +199,7 @@ form #form-small-btn {
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
+/*discribe an animation available in chrom browser. applyed on an element which mention this keyFrame in it style*/
 @-webkit-keyframes fadein {
   from {
     bottom: 0;
@@ -191,6 +210,7 @@ form #form-small-btn {
     opacity: 1;
   }
 }
+/*discribe an animation. applyed on an element which mention this keyFrame in it style*/
 @keyframes fadein {
   from {
     bottom: 0;
@@ -201,6 +221,7 @@ form #form-small-btn {
     opacity: 1;
   }
 }
+/*discribe an animation available in chrom browser. applyed on an element which mention this keyFrame in it style*/
 @-webkit-keyframes fadeout {
   from {
     bottom: 30px;
@@ -211,6 +232,7 @@ form #form-small-btn {
     opacity: 0;
   }
 }
+/*discribe an animation. applyed on an element which mention this keyFrame in it style*/
 @keyframes fadeout {
   from {
     bottom: 30px;
