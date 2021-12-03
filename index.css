@@ -1,0 +1,223 @@
+/**
+baseic style for html file
+*/
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  background-image: url('images/background.jpg');
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#title {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  display: block;
+  background: #30e4ab;
+  border-radius: 40px;
+  padding: 14px;
+  transform: -50%;
+  position: absolute;
+  transform: translate(0%, -313%);
+}
+#content {
+  border: 1px solid #30e4ab;
+  background-color: rgba(245, 245, 245, 0.8);
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  width: 50%;
+  border-radius: 40px;
+  align-items: center;
+  position: relative;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+form #input-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+form #input-name {
+  width: 16em;
+  height: 2em;
+  font-size: 14px;
+  border: solid 1px #30e4ab;
+  border-radius: 11px;
+  color: blue;
+  margin-left: 12px;
+}
+form #input-name-label {
+  font-weight: bold;
+}
+form input:invalid {
+  border: red solid 3px !important;
+}
+form #gender {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 14px;
+  justify-content: cente;
+}
+form #form-small-btn {
+  background: #30e4ab;
+  color: white;
+  border-radius: 6px;
+  width: 10em;
+  padding: 8px;
+  border: transparent;
+  margin-bottom: 6px;
+}
+#result {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3em;
+}
+#result #prediction {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#result #predict-title {
+  font-weight: bold;
+  color: blue;
+  font-size: 24px;
+  top: 59px;
+  position: absolute;
+}
+#result #prediction-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: -2em;
+}
+#result #prediction-wrapper #prediction-result {
+  color: blue;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 7px;
+}
+#result #prediction-wrapper #prediction-save {
+  border: transparent;
+  background-color: blue;
+  color: white;
+  border-radius: 9px;
+  padding: 9px;
+}
+#result #saved-answer {
+  margin-top: 2em;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#result #saved-answer #saved-answer-label {
+  background: pink;
+  color: white;
+  padding: 7px;
+  width: 6em;
+  border-radius: 3px;
+}
+#result #saved-answer #saved-answer-gender {
+  color: PINK;
+  FONT-WEIGHT: BOLD;
+}
+#result #saved-answer #saved-before {
+  display: none;
+  color: #30ad30;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+#result #saved-answer #cancle-btn {
+  color: red;
+  BORDER: 1px solid red;
+  border-radius: 11px;
+  width: 11em;
+  margin-top: 12px;
+}
+#gender {
+  display: flex;
+  flex-direction: column;
+}
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #30e4ab;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  transition: opacity 0.5s linear;
+}
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
