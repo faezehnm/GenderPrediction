@@ -95,6 +95,7 @@ function getName(){
             }
     })
     .catch( err =>{ // if error happend in sending request write in console 
+        openSnackbar("Oops! something wrong happened :`(");
         return console.log(err);
     }); 
 
